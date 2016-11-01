@@ -590,7 +590,7 @@ msgid "View results"
 msgstr ""
 
 #: includes/class-sensei-course.php:1563, includes/shortcodes/class-sensei-shortcode-user-courses.php:211, widgets/widget-woothemes-sensei-course-component.php:495
-msgid "You have no active courses."
+msgid "You have no active courses on-demand."
 msgstr ""
 
 #: includes/class-sensei-course.php:1564, includes/shortcodes/class-sensei-shortcode-user-courses.php:192
