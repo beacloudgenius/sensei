@@ -245,7 +245,7 @@ class WooThemes_Sensei_Course_Component_Widget extends WP_Widget {
 
 		} elseif ( 'activecourses' == $this->instance['component'] ) {
 
-			_e( 'You have no active courses.', 'woothemes-sensei' );
+			_e( 'You have no active courses on-demand.', 'woothemes-sensei' );
 
 		} elseif ( 'completedcourses' == $this->instance['component'] ) {
 
