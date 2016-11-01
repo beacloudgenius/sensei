@@ -1573,7 +1573,7 @@ class Sensei_Course {
 		} // End If Statement
 
 		if( $manage ) {
-			$no_active_message = __( 'You have no active courses.', 'woothemes-sensei' );
+			$no_active_message = __( 'You have no active courses on-demand.', 'woothemes-sensei' );
 			$no_complete_message = __( 'You have not completed any courses yet.', 'woothemes-sensei' );
 		} else {
 			$no_active_message =  __( 'This learner has no active courses.', 'woothemes-sensei' );
