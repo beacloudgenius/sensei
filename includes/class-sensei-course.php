@@ -826,7 +826,7 @@ class Sensei_Course {
 		$img_url = '';
 		if ( has_post_thumbnail( $course_id ) ) {
    			// Get Featured Image
-   			$img_url = get_the_post_thumbnail( $course_id, array( $width, $height ), array( 'class' => 'woo-image thumbnail alignleft') );
+   			$img_url = get_the_post_thumbnail( $course_id, array( $width, $height ), array( 'class' => 'woo-image thumbnail') );
  		} else {
 
 			// Check for a Lesson Image
@@ -835,7 +835,7 @@ class Sensei_Course {
 			foreach ($course_lessons as $lesson_item){
 				if ( has_post_thumbnail( $lesson_item->ID ) ) {
 					// Get Featured Image
-					$img_url = get_the_post_thumbnail( $lesson_item->ID, array( $width, $height ), array( 'class' => 'woo-image thumbnail alignleft') );
+					$img_url = get_the_post_thumbnail( $lesson_item->ID, array( $width, $height ), array( 'class' => 'woo-image thumbnail') );
 					if ( '' != $img_url ) {
 						break;
 					} // End If Statement
@@ -848,7 +848,7 @@ class Sensei_Course {
  				// Display Image Placeholder if none
 				if ( Sensei()->settings->get( 'placeholder_images_enable' ) ) {
 
-                    $img_url = apply_filters( 'sensei_course_placeholder_image_url', '<img src="http://placehold.it/' . $width . 'x' . $height . '" class="woo-image thumbnail alignleft" />' );
+                    $img_url = apply_filters( 'sensei_course_placeholder_image_url', '<img src="//placehold.it/' . $width . 'x' . $height . '" class="woo-image thumbnail" />' );
 
 				} // End If Statement
 
