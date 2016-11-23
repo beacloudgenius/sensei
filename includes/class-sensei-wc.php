@@ -513,7 +513,7 @@ Class Sensei_WC{
 							  . '" title="' . __('complete purchase', 'woothemes-sensei') . '">'
 							  . __('complete the purchase', 'woothemes-sensei') . '</a>';
 
-				echo sprintf(  __('You have already added this Course to your cart. Please %1$s to access the course.', 'woothemes-sensei'), $cart_link );
+				echo sprintf(  __('You have already added this to your cart. Please %1$s to access premium content.', 'woothemes-sensei'), $cart_link );
 
 				?>
 			</div>
@@ -906,7 +906,7 @@ Class Sensei_WC{
 			<?php } ?>
 
 			<button type="submit" class="single_add_to_cart_button button alt">
-				<?php $button_text = $product->get_price_html() . ' - ' . __( 'Purchase this Course', 'woothemes-sensei' ); ?>
+				<?php $button_text = $product->get_price_html() . ' - ' . __( 'Purchase premium membership to access', 'woothemes-sensei' ); ?>
 				<?php
 				/**
 				 * Filter Add to Cart button text
@@ -974,7 +974,7 @@ Class Sensei_WC{
 
 			$cart_link = '<a href="' . wc_get_checkout_url() . '" title="' . __( 'Checkout', 'woocommerce' ) . '">' . __( 'checkout', 'woocommerce' ) . '</a>';
 
-			$message = sprintf( __( 'This course is already in your cart, please proceed to %1$s, to gain access.', 'woothemes-sensei' ), $cart_link );
+			$message = sprintf( __( 'This is already in your cart, please proceed to %1$s, to gain access.', 'woothemes-sensei' ), $cart_link );
 			?>
 			<span class="add-to-cart-login">
 					<?php echo $message; ?>
@@ -994,7 +994,7 @@ Class Sensei_WC{
 			<?php
 
 		} else {
-			$message = sprintf( __( 'Or %1$s to access your purchased courses', 'woothemes-sensei' ), $login_link );
+			$message = sprintf( __( 'Or %1$s to access premium content', 'woothemes-sensei' ), $login_link );
 			?>
 				<span class="add-to-cart-login">
 					<?php echo $message; ?>
