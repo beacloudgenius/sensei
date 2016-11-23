@@ -2871,7 +2871,7 @@ class Sensei_Course {
 		    if ( Sensei_WC::is_woocommerce_active() && Sensei_WC::is_course_purchasable( $post->ID ) ) {
 
 	            $login_link =  '<a href="' . sensei_user_login_url() . '">' . __( 'log in', 'woothemes-sensei' ) . '</a>';
-	            $message = sprintf( __( 'Or %1$s to access your purchased courses', 'woothemes-sensei' ), $login_link );
+	            $message = sprintf( __( 'Or %1$s to access premium content.', 'woothemes-sensei' ), $login_link );
 	            Sensei()->notices->add_notice( $message, 'info' ) ;
 	            Sensei_WC::the_add_to_cart_button_html( $post->ID );
 

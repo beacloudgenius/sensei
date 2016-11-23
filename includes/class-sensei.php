@@ -579,7 +579,7 @@ class Sensei_Main {
 
 		        } elseif( Sensei_WC::is_woocommerce_active() && Sensei_WC::is_course_purchasable( $post->ID ) && ! Sensei_Utils::user_started_course( $post->ID, $current_user->ID )  ) {
 
-			        $message = sprintf( __( 'Or %1$s login %2$s to access your purchased courses', 'woothemes-sensei' ), '<a href="'.sensei_user_login_url().'">', '</a>' );
+			        $message = sprintf( __( 'Or %1$s login %2$s to access premium content.', 'woothemes-sensei' ), '<a href="'.sensei_user_login_url().'">', '</a>' );
 			        $this->notices->add_notice( $message, 'info' );
 
 
@@ -889,7 +889,7 @@ class Sensei_Main {
             add_filter( 'sensei_answer_text', 'latex_markup' );
         }
     }
-    
+
 	/**
 	 * Checks that the WP QuickLaTeX plugin has been activated to support LaTeX within question titles and answers
 	 *
@@ -1168,7 +1168,7 @@ class Sensei_Main {
                 $custom_actions['support'] = sprintf( '<a href="%s" target="_blank">%s</a>', $this->get_support_url(), esc_html_x( 'Support', 'noun', 'woothemes-sensei' ) );
             }
 
-            // add the links to the front of the actions list   
+            // add the links to the front of the actions list
             return array_merge( $custom_actions, $actions );
         }
 
@@ -1236,7 +1236,7 @@ class Sensei_Main {
 
         /**
          * Returns the admin configuration url for the admin general configuration page
-         * 
+         *
          * @return string admin configuration url for the admin general configuration page
          */
         public function get_general_configuration_url() {
