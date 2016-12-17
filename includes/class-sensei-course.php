@@ -832,7 +832,7 @@ class Sensei_Course {
 		$img_url = '';
 		if ( has_post_thumbnail( $course_id ) ) {
    			// Get Featured Image
-   			$img_url = get_the_post_thumbnail( $course_id, array( $width, $height ), array( 'class' => 'woo-image thumbnail alignleft') );
+   			$img_url = get_the_post_thumbnail( $course_id, array( $width, $height ), array( 'class' => 'woo-image thumbnail') );
  		} else {
 
 			// Check for a Lesson Image
@@ -841,7 +841,7 @@ class Sensei_Course {
 			foreach ($course_lessons as $lesson_item){
 				if ( has_post_thumbnail( $lesson_item->ID ) ) {
 					// Get Featured Image
-					$img_url = get_the_post_thumbnail( $lesson_item->ID, array( $width, $height ), array( 'class' => 'woo-image thumbnail alignleft') );
+					$img_url = get_the_post_thumbnail( $lesson_item->ID, array( $width, $height ), array( 'class' => 'woo-image thumbnail') );
 					if ( '' != $img_url ) {
 						break;
 					} // End If Statement
@@ -854,7 +854,7 @@ class Sensei_Course {
  				// Display Image Placeholder if none
 				if ( Sensei()->settings->get( 'placeholder_images_enable' ) ) {
 
-                    $img_url = apply_filters( 'sensei_course_placeholder_image_url', '<img src="http://placehold.it/' . $width . 'x' . $height . '" class="woo-image thumbnail alignleft" />' );
+                    $img_url = apply_filters( 'sensei_course_placeholder_image_url', '<img src="//placehold.it/' . $width . 'x' . $height . '" class="woo-image thumbnail" />' );
 
 				} // End If Statement
 
@@ -1555,7 +1555,7 @@ class Sensei_Course {
 		} // End If Statement
 
 		if( $manage ) {
-			$no_active_message = __( 'You have no active courses.', 'woothemes-sensei' );
+			$no_active_message = __( 'You have no active courses on-demand.', 'woothemes-sensei' );
 			$no_complete_message = __( 'You have not completed any courses yet.', 'woothemes-sensei' );
 		} else {
 			$no_active_message =  __( 'This learner has no active courses.', 'woothemes-sensei' );
@@ -2852,7 +2852,7 @@ class Sensei_Course {
 		    if ( Sensei_WC::is_woocommerce_active() && Sensei_WC::is_course_purchasable( $post->ID ) ) {
 
 	            $login_link =  '<a href="' . sensei_user_login_url() . '">' . __( 'log in', 'woothemes-sensei' ) . '</a>';
-	            $message = sprintf( __( 'Or %1$s to access your purchased courses', 'woothemes-sensei' ), $login_link );
+	            $message = sprintf( __( 'Or %1$s to access premium content.', 'woothemes-sensei' ), $login_link );
 	            Sensei()->notices->add_notice( $message, 'info' ) ;
 	            Sensei_WC::the_add_to_cart_button_html( $post->ID );
 
